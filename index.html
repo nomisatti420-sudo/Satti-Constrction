@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Satti Construction — residential, commercial and industrial construction services.">
+  <title>Satti Construction | Building Excellence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--gold:#d7aa3d;--gold2:#f0c85a;--black:#070707;--panel:#111;--white:#f5f5f5;--muted:#b9b9b9}
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{margin:0;background:var(--black);color:var(--white);font-family:Montserrat,Arial,sans-serif}
+    a{text-decoration:none;color:inherit}.container{width:min(1180px,92%);margin:auto}
+    .nav{position:fixed;z-index:20;top:0;left:0;right:0;background:rgba(5,5,5,.92);backdrop-filter:blur(12px);border-bottom:1px solid #252525}
+    .navin{height:82px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:10px}.brandmark{font-size:42px;font-weight:800;color:var(--gold);line-height:.8}
+    .brandtext{font-weight:800;letter-spacing:5px;font-size:20px}.brandtext small{display:block;font-size:9px;color:var(--gold);letter-spacing:2px;margin-top:5px}
+    .links{display:flex;gap:32px;font-size:12px;font-weight:700}.links a:hover,.links a.active{color:var(--gold)}
+    .phone{border:1px solid var(--gold);padding:12px 17px;border-radius:3px;font-weight:700;font-size:13px;color:var(--gold)}
+    .menu{display:none;color:var(--gold);font-size:28px}
+    .hero{min-height:690px;padding-top:82px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(0,0,0,.96) 0%,rgba(0,0,0,.82) 37%,rgba(0,0,0,.22) 75%),url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85') center/cover}
+    .hero h1{font-family:'Barlow Condensed',sans-serif;font-size:58px;line-height:.95;margin:12px 0 18px;text-transform:uppercase;letter-spacing:1px}.hero h1 span{color:var(--gold2)}
+    .eyebrow{color:var(--gold);font-size:14px;font-weight:800;letter-spacing:.5px}.hero p{max-width:550px;color:#ddd;line-height:1.8;font-size:14px}
+    .buttons{display:flex;gap:18px;margin-top:25px}.btn{padding:14px 23px;border:1px solid var(--gold);font-weight:800;font-size:12px;border-radius:3px}.btn.gold{background:var(--gold2);color:#111}.btn:hover{transform:translateY(-2px)}
+    .stats{background:#0c0c0c;border:1px solid #765d21;border-radius:6px;margin-top:-28px;position:relative;display:grid;grid-template-columns:repeat(4,1fr);padding:18px}
+    .stat{text-align:center;border-right:1px solid #333}.stat:last-child{border:0}.stat strong{display:block;color:var(--gold2);font-size:25px}.stat span{font-size:11px;color:#ddd}
+    section{padding:70px 0}.dark{background:#090909}.aboutgrid{display:grid;grid-template-columns:1fr 1.6fr;gap:55px}.title h2{font-family:'Barlow Condensed';font-size:42px;line-height:1;margin:8px 0}.title p,.abouttext{color:#bbb;font-size:13px;line-height:1.9}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.card{min-height:150px;border:1px solid #4d4025;border-radius:5px;padding:22px;background-size:cover;background-position:center;position:relative;overflow:hidden}.card:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.28))}.card>*{position:relative}.icon{color:var(--gold2);font-size:28px}.card h3{font-size:13px;margin:12px 0 0}.projects{background:#f2f2f2;color:#111}.projectgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.projectgrid img{width:100%;height:190px;object-fit:cover;border-radius:4px}.why{display:grid;grid-template-columns:1.2fr 2fr;gap:30px}.whygrid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}.whyitem{border-left:1px solid #5b4720;padding-left:18px}.whyitem b{color:var(--gold2);font-size:13px}.whyitem p{font-size:11px;color:#aaa;line-height:1.7}.cta{background:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.65)),url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80') center/cover;border:1px solid #765d21;border-radius:6px;padding:35px;display:flex;justify-content:space-between;align-items:center}.cta h2{font-family:'Barlow Condensed';color:var(--gold2);font-size:32px;margin:0}.cta p{margin:8px 0 0;color:#ddd}
+    footer{background:#050505;border-top:1px solid #282828;padding:50px 0 18px}.footgrid{display:grid;grid-template-columns:1.5fr 1fr 1.3fr 1.4fr;gap:30px}.footgrid h4{color:var(--gold2);font-size:13px}.footgrid p,.footgrid a{font-size:11px;color:#aaa;line-height:2;display:block}.copy{border-top:1px solid #222;margin-top:30px;padding-top:15px;color:#777;font-size:10px;display:flex;justify-content:space-between}
+    .wa{position:fixed;right:20px;bottom:20px;width:58px;height:58px;background:#25d366;border-radius:50%;display:grid;place-items:center;color:white;font-size:28px;z-index:30;box-shadow:0 8px 25px #000}
+    @media(max-width:850px){.links,.phone{display:none}.menu{display:block}.hero h1{font-size:44px}.stats{grid-template-columns:repeat(2,1fr);gap:18px}.stat:nth-child(2){border:0}.aboutgrid,.why{grid-template-columns:1fr}.services{grid-template-columns:repeat(2,1fr)}.projectgrid{grid-template-columns:repeat(2,1fr)}.footgrid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:520px){.hero{min-height:650px}.hero h1{font-size:38px}.services,.projectgrid,.whygrid,.footgrid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.cta{display:block}.cta .btn{display:inline-block;margin-top:20px}.copy{display:block}}
+  </style>
+</head>
+<body>
+<nav class="nav"><div class="container navin">
+  <a class="brand" href="#home"><span class="brandmark">S</span><span class="brandtext">SATTI<small>CONSTRUCTION</small></span></a>
+  <div class="links"><a class="active" href="#home">HOME</a><a href="#about">ABOUT US</a><a href="#services">SERVICES</a><a href="#projects">PROJECTS</a><a href="#why">WHY CHOOSE US</a><a href="#contact">CONTACT</a></div>
+  <a class="phone" href="tel:0133819087">☎ 0133819087</a><div class="menu">☰</div>
+</div></nav>
+
+<header id="home" class="hero"><div class="container"><div class="eyebrow">WELCOME TO SATTI CONSTRUCTION</div>
+<h1>BUILDING EXCELLENCE.<br><span>CREATING THE FUTURE.</span></h1>
+<p>We deliver reliable residential, commercial, and industrial construction services with a commitment to quality, safety, and customer satisfaction.</p>
+<div class="buttons"><a class="btn gold" href="#contact">▣ &nbsp; GET A FREE QUOTE</a><a class="btn" href="#projects">OUR PROJECTS →</a></div></div></header>
+
+<div class="container stats"><div class="stat"><strong>100+</strong><span>Projects Completed</span></div><div class="stat"><strong>10+</strong><span>Years Experience</span></div><div class="stat"><strong>100%</strong><span>Client Satisfaction</span></div><div class="stat"><strong>15+</strong><span>Professional Team</span></div></div>
+
+<section id="about" class="dark"><div class="container aboutgrid"><div class="title"><div class="eyebrow">ABOUT US</div><h2>Building Strong Foundations<br>for a Better Tomorrow</h2></div><div class="abouttext">Satti Construction is dedicated to delivering high-quality construction services with professionalism, integrity, and attention to detail. From residential homes to commercial and industrial projects, we focus on quality workmanship, timely completion, and customer satisfaction.<br><br>Whether you're planning a new build, renovation, or large-scale development, our experienced team is committed to turning your vision into reality.</div></div></section>
+
+<section id="services" class="dark" style="padding-top:0"><div class="container"><div class="eyebrow">OUR SERVICES</div><div class="services">
+<div class="card" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80')"><div class="icon">⌂</div><h3>RESIDENTIAL<br>CONSTRUCTION</h3></div>
+<div class="card" style="background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80')"><div class="icon">▥</div><h3>COMMERCIAL<br>CONSTRUCTION</h3></div>
+<div class="card" style="background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80')"><div class="icon">⚙</div><h3>INDUSTRIAL<br>CONSTRUCTION</h3></div>
+<div class="card" style="background-image:url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=900&q=80')"><div class="icon">⌂</div><h3>RENOVATION &<br>REMODELING</h3></div>
+<div class="card" style="background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80')"><div class="icon">◆</div><h3>INTERIOR &<br>EXTERIOR</h3></div>
+<div class="card" style="background-image:url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=80')"><div class="icon">♟</div><h3>PROJECT<br>MANAGEMENT</h3></div>
+</div></div></section>
+
+<section id="projects" class="projects"><div class="container"><div class="eyebrow">FEATURED PROJECTS</div><div class="title"><h2>Our Recent Projects</h2><p>We take pride in every project we complete. Here are some of our recent works.</p></div><div class="projectgrid" style="margin-top:20px">
+<img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80">
+</div></div></section>
+
+<section id="why" class="dark"><div class="container why"><div class="title"><div class="eyebrow">WHY CHOOSE US</div><h2>We Build with<br>Passion and Precision</h2></div><div class="whygrid">
+<div class="whyitem"><b>◇ Premium Quality</b><p>We use high quality materials for long lasting results.</p></div>
+<div class="whyitem"><b>♧ Experienced Team</b><p>Our skilled professionals ensure excellence in every project.</p></div>
+<div class="whyitem"><b>◷ On-Time Delivery</b><p>We value your time and always complete projects on schedule.</p></div>
+<div class="whyitem"><b>$ Affordable Pricing</b><p>Quality construction services at competitive prices.</p></div>
+<div class="whyitem"><b>⚿ Safety First</b><p>We follow strict safety standards to protect our team and clients.</p></div>
+<div class="whyitem"><b>♢ Customer Satisfaction</b><p>Our clients' satisfaction is our top priority.</p></div>
+</div></div></section>
+
+<section class="dark" style="padding-top:0"><div class="container cta"><div><h2>READY TO BUILD YOUR DREAM PROJECT?</h2><p>Let's work together and turn your vision into reality.</p></div><a class="btn gold" href="#contact">GET A FREE CONSULTATION →</a></div></section>
+
+<footer id="contact"><div class="container footgrid"><div><div class="brand"><span class="brandmark">S</span><span class="brandtext">SATTI<small>CONSTRUCTION</small></span></div><p>Building excellence with quality, integrity, and professionalism.<br>We turn ideas into reality.</p></div>
+<div><h4>QUICK LINKS</h4><a href="#home">Home</a><a href="#about">About Us</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#why">Why Choose Us</a><a href="#contact">Contact</a></div>
+<div><h4>OUR SERVICES</h4><p>Residential Construction<br>Commercial Construction<br>Industrial Construction<br>Renovation & Remodeling<br>Interior & Exterior<br>Project Management</p></div>
+<div><h4>CONTACT US</h4><a href="tel:0133819087">☎ 0133819087</a><a href="mailto:nomisatti420@gmail.com">✉ nomisatti420@gmail.com</a><p>📍 Your Office Address<br><small>(Add your address here)</small></p></div></div>
+<div class="container copy"><span>© 2026 Satti Construction. All Rights Reserved.</span><span>Designed with ♥ for Excellence</span></div></footer>
+<a class="wa" href="https://wa.me/60133819087" target="_blank" aria-label="WhatsApp">◉</a>
+</body></html>
